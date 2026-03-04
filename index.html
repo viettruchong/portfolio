@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Viet-Truc (Rose) Hong — EdTech Project Manager · Singapore</title>
+<meta name="description" content="PMP® EdTech Project Manager with 7+ years delivering B2B2C programmes, youth education, and community events. Based in Singapore.">
+<meta property="og:title" content="Viet-Truc (Rose) Hong — EdTech Project Manager">
+<meta property="og:description" content="12,000 students reached · 700+ event participants · 95% on-time delivery">
+<meta property="og:image" content="https://viettruchong.wordpress.com/wp-content/uploads/2023/11/img_5985-3.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --cream: #faf7f2;
+  --warm: #f5f0e8;
+  --terra: #c4714a;
+  --terra-light: #e8a88a;
+  --deep: #1a1510;
+  --mid: #5c4f3d;
+  --border: rgba(90,70,50,0.13);
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --sans: 'DM Sans', system-ui, sans-serif;
+  --mono: 'DM Mono', monospace;
+}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--sans); background: var(--cream); color: var(--deep); overflow-x: hidden; }
+
+/* ── NAV ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+  padding: 16px 56px;
+  display: flex; align-items: center; justify-content: space-between;
+  background: rgba(250,247,242,0.92);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+}
+.nav-name { font-family: var(--serif); font-size: 1.05rem; color: var(--mid); letter-spacing: 0.03em; }
+.nav-links { display: flex; gap: 28px; }
+.nav-links a { font-size: 0.74rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--mid); text-decoration: none; transition: color 0.2s; }
+.nav-links a:hover { color: var(--terra); }
+
+/* ── HERO ── */
+.hero { display: grid; grid-template-columns: 1fr 1fr; min-height: 100vh; padding-top: 60px; }
+.hero-left { padding: 72px 56px 72px 80px; display: flex; flex-direction: column; justify-content: center; }
+.eyebrow { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--terra); margin-bottom: 24px; }
+.hero-name { font-family: var(--serif); font-size: clamp(2.8rem, 5vw, 4.6rem); font-weight: 300; line-height: 1.05; color: var(--deep); margin-bottom: 20px; }
+.hero-name em { font-style: italic; color: var(--terra); }
+.hero-tag { font-size: 1rem; font-weight: 300; line-height: 1.75; color: var(--mid); max-width: 460px; margin-bottom: 36px; }
+.hero-tag strong { color: var(--deep); font-weight: 500; }
+.badges { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 40px; }
+.badge { padding: 5px 13px; border: 1px solid var(--border); font-size: 0.71rem; letter-spacing: 0.05em; color: var(--mid); background: rgba(255,255,255,0.6); border-radius: 2px; }
+.badge.hi { border-color: var(--terra); color: var(--terra); background: rgba(196,113,74,0.06); }
+.btns { display: flex; gap: 14px; flex-wrap: wrap; }
+.btn-solid { padding: 12px 26px; background: var(--terra); color: white; font-size: 0.76rem; letter-spacing: 0.09em; text-transform: uppercase; text-decoration: none; transition: background 0.2s; }
+.btn-solid:hover { background: #b0613b; }
+.btn-ghost { padding: 12px 26px; background: transparent; color: var(--mid); font-size: 0.76rem; letter-spacing: 0.09em; text-transform: uppercase; text-decoration: none; border: 1px solid var(--border); transition: border-color 0.2s, color 0.2s; }
+.btn-ghost:hover { border-color: var(--mid); color: var(--deep); }
+.hero-right { position: relative; overflow: hidden; background: var(--warm); }
+.hero-right img { width: 100%; height: 100%; object-fit: cover; object-position: top center; filter: sepia(6%) contrast(1.04); display: block; }
+.hero-quote { position: absolute; bottom: 32px; left: 24px; right: 24px; font-family: var(--serif); font-size: 0.95rem; font-style: italic; line-height: 1.5; color: white; background: rgba(26,21,16,0.4); backdrop-filter: blur(4px); padding: 14px 18px; border-left: 2px solid var(--terra-light); text-shadow: 0 1px 3px rgba(0,0,0,0.4); }
+
+/* ── STATS ── */
+.stats { background: var(--deep); padding: 48px 80px; display: grid; grid-template-columns: repeat(5,1fr); gap: 16px; border-top: 3px solid var(--terra); }
+.stat { text-align: center; }
+.stat-n { font-family: var(--serif); font-size: clamp(2.2rem, 3.5vw, 3.2rem); font-weight: 300; color: var(--terra-light); display: block; line-height: 1; }
+.stat-l { font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.5); display: block; margin-top: 8px; line-height: 1.4; }
+
+/* ── SHARED SECTION STYLES ── */
+.sec { padding: 88px 80px; }
+.sec-label { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--terra); display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+.sec-label::after { content: ''; width: 28px; height: 1px; background: var(--terra); }
+.sec-title { font-family: var(--serif); font-size: clamp(1.9rem, 3.2vw, 2.8rem); font-weight: 300; line-height: 1.15; color: var(--deep); margin-bottom: 48px; }
+.sec-title em { font-style: italic; color: var(--terra); }
+
+/* ── ABOUT ── */
+#about { background: var(--warm); display: grid; grid-template-columns: 1fr 1.1fr; gap: 72px; align-items: start; padding: 88px 80px; }
+.about-text { font-size: 1rem; font-weight: 300; line-height: 1.8; color: var(--mid); margin-bottom: 20px; }
+.about-text strong { color: var(--deep); font-weight: 500; }
+.values { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 32px; }
+.val-card { padding: 18px 20px; border: 1px solid var(--border); background: white; }
+.val-card:hover { border-color: var(--terra); }
+.val-icon { font-size: 1.2rem; display: block; margin-bottom: 8px; }
+.val-title { font-size: 0.82rem; font-weight: 500; color: var(--deep); margin-bottom: 4px; }
+.val-desc { font-size: 0.76rem; font-weight: 300; color: var(--mid); line-height: 1.5; }
+.skills { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 28px; }
+.skill { padding: 4px 11px; background: rgba(196,113,74,0.08); border: 1px solid rgba(196,113,74,0.22); font-size: 0.72rem; color: var(--terra); border-radius: 2px; }
+.photo-stack { position: relative; height: 380px; margin-bottom: 28px; }
+.photo-stack img { position: absolute; object-fit: cover; box-shadow: 0 10px 32px rgba(0,0,0,0.11); filter: sepia(5%); }
+.photo-stack img:nth-child(1) { top: 0; left: 0; width: 78%; height: 260px; }
+.photo-stack img:nth-child(2) { bottom: 0; right: 0; width: 72%; height: 220px; border: 6px solid white; }
+.certs { }
+.cert-h { font-family: var(--mono); font-size: 0.66rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--terra); margin-bottom: 10px; }
+.cert-row { display: flex; align-items: center; gap: 10px; padding: 9px 0; border-bottom: 1px solid var(--border); }
+.cert-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--terra); flex-shrink: 0; }
+.cert-name { font-size: 0.82rem; color: var(--mid); font-weight: 300; }
+.cert-yr { font-family: var(--mono); font-size: 0.68rem; color: var(--terra); margin-left: auto; }
+
+/* ── PROJECTS ── */
+#projects { background: var(--cream); }
+.proj-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; }
+.proj-card { background: var(--warm); border: 1px solid var(--border); padding: 36px 28px; position: relative; transition: background 0.25s; }
+.proj-card:hover { background: white; }
+.proj-num { font-family: var(--serif); font-size: 3.2rem; font-weight: 300; color: rgba(196,113,74,0.14); line-height: 1; display: block; margin-bottom: 16px; }
+.proj-tag { font-size: 0.65rem; letter-spacing: 0.13em; text-transform: uppercase; color: var(--terra); display: block; margin-bottom: 10px; }
+.proj-title { font-family: var(--serif); font-size: 1.4rem; font-weight: 400; color: var(--deep); line-height: 1.2; margin-bottom: 14px; }
+.proj-desc { font-size: 0.82rem; font-weight: 300; color: var(--mid); line-height: 1.65; margin-bottom: 22px; }
+.proj-metrics { display: flex; gap: 18px; flex-wrap: wrap; padding-top: 18px; border-top: 1px solid var(--border); }
+.met-val { font-family: var(--serif); font-size: 1.4rem; font-weight: 400; color: var(--terra); display: block; }
+.met-key { font-size: 0.65rem; color: var(--mid); letter-spacing: 0.05em; }
+
+/* ── GALLERY ── */
+#gallery { background: var(--deep); padding: 88px 0; }
+#gallery .inner { padding: 0 80px; }
+#gallery .sec-label { color: var(--terra-light); }
+#gallery .sec-label::after { background: var(--terra-light); }
+#gallery .sec-title { color: rgba(255,255,255,0.9); margin-bottom: 32px; }
+#gallery .sec-title em { color: var(--terra-light); }
+.g-strip { display: flex; gap: 3px; overflow-x: auto; padding-bottom: 6px; scrollbar-width: thin; scrollbar-color: var(--terra) transparent; }
+.g-strip::-webkit-scrollbar { height: 3px; }
+.g-strip::-webkit-scrollbar-thumb { background: var(--terra); }
+.g-item { flex: 0 0 auto; position: relative; overflow: hidden; }
+.g-item img { width: 100%; height: 100%; object-fit: cover; display: block; filter: sepia(8%) contrast(1.04); transition: transform 0.4s; }
+.g-item:hover img { transform: scale(1.04); filter: none; }
+.g-cap { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(26,21,16,0.82)); padding: 24px 12px 11px; font-size: 0.7rem; color: rgba(255,255,255,0.88); letter-spacing: 0.05em; line-height: 1.4; }
+.row1 .g-item { height: 270px; width: 350px; }
+.row2 { margin-top: 3px; }
+.row2 .g-item { height: 210px; width: 280px; }
+.g-hint { text-align: right; padding: 12px 80px 0; font-size: 0.68rem; color: rgba(255,255,255,0.28); letter-spacing: 0.1em; }
+
+/* Upload zone */
+.upload-wrap { margin: 40px 80px 0; }
+.upload-zone { border: 2px dashed rgba(255,255,255,0.18); padding: 32px; text-align: center; cursor: pointer; transition: border-color 0.2s, background 0.2s; border-radius: 2px; }
+.upload-zone:hover { border-color: var(--terra-light); background: rgba(232,168,138,0.06); }
+.upload-zone .uz-icon { font-size: 1.6rem; display: block; margin-bottom: 10px; }
+.upload-zone .uz-title { font-family: var(--serif); font-size: 1.2rem; font-weight: 300; color: rgba(255,255,255,0.65); margin-bottom: 4px; }
+.upload-zone .uz-sub { font-size: 0.71rem; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; }
+#uploaded-gallery { display: none; margin-top: 12px; }
+.uploaded-header { display: flex; justify-content: space-between; align-items: center; font-family: var(--mono); font-size: 0.66rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--terra-light); margin-bottom: 10px; }
+.clear-btn { background: none; border: none; color: rgba(255,255,255,0.28); font-size: 0.66rem; letter-spacing: 0.1em; cursor: pointer; text-transform: uppercase; font-family: var(--mono); }
+#uploaded-strip { display: flex; gap: 3px; overflow-x: auto; scrollbar-width: thin; scrollbar-color: var(--terra) transparent; }
+
+/* ── CV CTA ── */
+#cv { background: var(--warm); padding: 88px 80px; }
+.cv-layout { display: grid; grid-template-columns: 1.1fr 1fr; gap: 72px; align-items: center; }
+.cv-headline { font-family: var(--serif); font-size: clamp(1.9rem, 3vw, 2.7rem); font-weight: 300; line-height: 1.15; color: var(--deep); margin-bottom: 20px; }
+.cv-headline em { font-style: italic; color: var(--terra); }
+.cv-body { font-size: 0.95rem; font-weight: 300; color: var(--mid); line-height: 1.8; margin-bottom: 32px; max-width: 500px; }
+.cv-body strong { color: var(--deep); font-weight: 500; }
+.cv-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+.cv-btn-dl { padding: 13px 26px; background: var(--deep); color: white; font-size: 0.76rem; letter-spacing: 0.09em; text-transform: uppercase; text-decoration: none; border: 2px solid var(--deep); transition: background 0.2s, border-color 0.2s; }
+.cv-btn-dl:hover { background: var(--terra); border-color: var(--terra); }
+.cv-btn-li { padding: 13px 26px; background: transparent; color: var(--mid); font-size: 0.76rem; letter-spacing: 0.09em; text-transform: uppercase; text-decoration: none; border: 2px solid var(--border); transition: border-color 0.2s, color 0.2s; }
+.cv-btn-li:hover { border-color: var(--mid); color: var(--deep); }
+.cv-cards { display: flex; flex-direction: column; gap: 14px; }
+.cv-card { display: flex; gap: 16px; align-items: flex-start; padding: 20px 22px; border: 1px solid var(--border); background: white; transition: border-color 0.2s, transform 0.2s; }
+.cv-card:hover { border-color: var(--terra); transform: translateX(4px); }
+.cv-card-icon { font-size: 1.3rem; flex-shrink: 0; margin-top: 1px; }
+.cv-card-title { font-size: 0.84rem; font-weight: 500; color: var(--deep); margin-bottom: 4px; }
+.cv-card-text { font-size: 0.79rem; font-weight: 300; color: var(--mid); line-height: 1.55; }
+
+/* ── CONTACT ── */
+#contact { background: var(--deep); padding: 88px 80px; position: relative; overflow: hidden; }
+#contact::before { content: ''; position: absolute; top: -100px; right: -60px; width: 440px; height: 440px; border-radius: 50%; background: radial-gradient(circle, rgba(196,113,74,0.16) 0%, transparent 70%); pointer-events: none; }
+.contact-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 72px; align-items: start; position: relative; }
+#contact .sec-label { color: var(--terra-light); }
+#contact .sec-label::after { background: var(--terra-light); }
+#contact .sec-title { color: white; margin-bottom: 14px; }
+#contact .sec-title em { color: var(--terra-light); }
+.contact-sub { font-size: 0.95rem; font-weight: 300; color: rgba(255,255,255,0.6); line-height: 1.75; margin-bottom: 32px; max-width: 460px; }
+.contact-links { display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; }
+.c-link { display: flex; align-items: center; gap: 16px; padding: 17px 20px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); text-decoration: none; transition: background 0.2s, border-color 0.2s; }
+.c-link:hover { background: rgba(255,255,255,0.1); border-color: rgba(196,113,74,0.4); }
+.c-link-icon { font-size: 1.1rem; flex-shrink: 0; }
+.c-link-label { font-size: 0.63rem; letter-spacing: 0.13em; text-transform: uppercase; color: rgba(255,255,255,0.38); margin-bottom: 2px; }
+.c-link-text { font-size: 0.88rem; color: rgba(255,255,255,0.82); font-weight: 300; }
+.contact-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
+.cta-a { padding: 13px 26px; background: var(--terra); color: white; font-size: 0.76rem; letter-spacing: 0.09em; text-transform: uppercase; text-decoration: none; border: 2px solid var(--terra); transition: all 0.2s; }
+.cta-a:hover { background: transparent; color: var(--terra-light); border-color: var(--terra-light); }
+.cta-b { padding: 13px 26px; background: transparent; color: rgba(255,255,255,0.55); font-size: 0.76rem; letter-spacing: 0.09em; text-transform: uppercase; text-decoration: none; border: 2px solid rgba(255,255,255,0.18); transition: all 0.2s; }
+.cta-b:hover { border-color: rgba(255,255,255,0.5); color: white; }
+.help-cards { display: flex; flex-direction: column; gap: 12px; }
+.help-header { font-family: var(--mono); font-size: 0.64rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.28); margin-bottom: 6px; }
+.help-card { padding: 18px 20px; border: 1px solid rgba(255,255,255,0.07); background: rgba(255,255,255,0.03); transition: background 0.2s, border-color 0.2s; }
+.help-card:hover { background: rgba(196,113,74,0.09); border-color: rgba(196,113,74,0.28); }
+.help-label { font-family: var(--mono); font-size: 0.63rem; letter-spacing: 0.13em; text-transform: uppercase; color: var(--terra-light); margin-bottom: 5px; }
+.help-text { font-size: 0.84rem; font-weight: 300; color: rgba(255,255,255,0.55); line-height: 1.55; }
+
+/* ── FOOTER ── */
+footer { background: var(--deep); border-top: 1px solid rgba(255,255,255,0.07); padding: 24px 80px; display: flex; justify-content: space-between; align-items: center; }
+.foot-name { font-family: var(--serif); font-size: 0.95rem; color: rgba(255,255,255,0.35); }
+.foot-note { font-size: 0.68rem; color: rgba(255,255,255,0.2); letter-spacing: 0.08em; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 960px) {
+  nav { padding: 14px 20px; }
+  .nav-links { display: none; }
+  .hero { grid-template-columns: 1fr; }
+  .hero-right { height: 55vw; }
+  .hero-left { padding: 48px 20px; }
+  .stats { grid-template-columns: repeat(3,1fr); padding: 36px 20px; }
+  .sec { padding: 60px 20px; }
+  #about { grid-template-columns: 1fr; gap: 40px; padding: 60px 20px; }
+  .proj-grid { grid-template-columns: 1fr; }
+  #gallery .inner, .upload-wrap, .g-hint { padding-left: 20px; padding-right: 20px; }
+  .cv-layout, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+  #cv, #contact { padding: 60px 20px; }
+  footer { padding: 18px 20px; flex-direction: column; gap: 6px; text-align: center; }
+}
+
+/* Count-up animation */
+@keyframes countUp { from { opacity: 0.4; } to { opacity: 1; } }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <span class="nav-name">Viet-Truc (Rose) Hong</span>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#projects">Work</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#cv">CV</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="eyebrow">PMP® Agile Project Manager · Singapore</div>
+    <h1 class="hero-name">Hi, I'm<br><em>Rose.</em></h1>
+    <p class="hero-tag">EdTech Project & Product Manager with <strong>7+ years delivering B2B2C programmes</strong> — from 12,000-student e-learning cohorts to 700+ person hybrid events — where structured delivery meets real human impact.</p>
+    <div class="badges">
+      <span class="badge hi">PMP® Certified</span>
+      <span class="badge">EdTech · PlayMoolah</span>
+      <span class="badge">NLP · Google</span>
+      <span class="badge">Agile Sprints</span>
+      <span class="badge">Vietnamese · English · Chinese</span>
+      <span class="badge">Singapore</span>
+    </div>
+    <div class="btns">
+      <a href="#projects" class="btn-solid">See My Work</a>
+      <a href="#cv" class="btn-ghost">View CV</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <img src="https://viettruchong.wordpress.com/wp-content/uploads/2023/11/img_5985-3.jpg" alt="Rose — Viet-Truc Hong">
+    <div class="hero-quote">"It does not matter how slowly you go, so long as you do not stop." — Confucius</div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stat"><span class="stat-n" data-target="7" data-suffix="+">7+</span><span class="stat-l">Years in EdTech PM</span></div>
+  <div class="stat"><span class="stat-n" data-target="12000">12,000</span><span class="stat-l">Students in B2B Cohorts</span></div>
+  <div class="stat"><span class="stat-n" data-target="700" data-suffix="+">700+</span><span class="stat-l">Event Participants Cumulatively</span></div>
+  <div class="stat"><span class="stat-n" data-target="90" data-suffix="%+">90%+</span><span class="stat-l">NLP Accuracy · Google</span></div>
+  <div class="stat"><span class="stat-n" data-target="95" data-suffix="%">95%</span><span class="stat-l">On-time Delivery Rate</span></div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div>
+    <div class="sec-label">About Me</div>
+    <h2 class="sec-title">Where systems<br>meet <em>people.</em></h2>
+    <p class="about-text">I'm a <strong>PMP®-certified EdTech Project & Product Manager</strong> currently at <strong>PlayMoolah</strong> in Singapore, where I spearhead B2B e-learning programmes reaching 12,000 students across multiple IHLs — with 100% positive impact scoring and a 22% improvement in financial confidence among youth aged 17–35.</p>
+    <p class="about-text">Before that, I spent <strong>4.5 years at Google (via Adecco)</strong> as an Associate NLP Linguist and Data Analyst for Vietnamese, maintaining 90%+ annotation accuracy and enabling AI models toward optimal automation. My linguistics degree and legal English background mean I communicate with precision across cultures.</p>
+    <p class="about-text">My track record spans a <strong>Postgraduate Diploma in Business Management</strong> (Valedictorian, GPA 3.97/4.0), volunteer PM roles with STEAM for Vietnam (2,000+ students, 34 countries), and mentoring with YMCA, MENDAKI, and NUS.</p>
+    <div class="values">
+      <div class="val-card"><span class="val-icon">🌱</span><div class="val-title">Growth Mindset</div><div class="val-desc">Challenges as opportunities. Always learning, always iterating.</div></div>
+      <div class="val-card"><span class="val-icon">🤝</span><div class="val-title">Accountability</div><div class="val-desc">Ownership from kickoff to close. My word is my deliverable.</div></div>
+      <div class="val-card"><span class="val-icon">🎓</span><div class="val-title">Lifetime Learning</div><div class="val-desc">Curiosity as a professional tool. Education never ends.</div></div>
+      <div class="val-card"><span class="val-icon">🌍</span><div class="val-title">Community First</div><div class="val-desc">Impact-driven work that extends beyond the org chart.</div></div>
+    </div>
+    <div class="skills">
+      <span class="skill">Agile PM · PMP®</span><span class="skill">E-learning · LearnWorlds</span><span class="skill">NLP · LLMs · RegEx</span><span class="skill">Data Analysis</span><span class="skill">B2B2C Programmes</span><span class="skill">Event Production</span><span class="skill">Stakeholder Management</span><span class="skill">Trello · Miro · Canva</span><span class="skill">Vietnamese · English (C1) · Chinese (B1)</span><span class="skill">Youth Education</span><span class="skill">Financial Wellbeing Ed</span>
+    </div>
+  </div>
+  <div>
+    <div class="photo-stack">
+      <img src="https://viettruchong.wordpress.com/wp-content/uploads/2023/11/img_4282-2.jpg" alt="Rose at event">
+      <img src="https://viettruchong.wordpress.com/wp-content/uploads/2023/12/img_7683.jpg" alt="Community gathering">
+    </div>
+    <div class="cert-h">Certifications</div>
+    <div class="cert-row"><span class="cert-dot"></span><span class="cert-name">PMP® — Project Management Professional, PMI</span><span class="cert-yr">2025</span></div>
+    <div class="cert-row"><span class="cert-dot"></span><span class="cert-name">Google Project Management Professional, Coursera</span><span class="cert-yr">2025</span></div>
+    <div class="cert-row"><span class="cert-dot"></span><span class="cert-name">Data Analytics & Insights, NUS School of Computing</span><span class="cert-yr">2023</span></div>
+    <div class="cert-row"><span class="cert-dot"></span><span class="cert-name">Microsoft Office Specialist — Word Expert & PowerPoint</span><span class="cert-yr">2018</span></div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="sec">
+  <div class="sec-label">Selected Work</div>
+  <h2 class="sec-title">Real numbers,<br><em>real impact.</em></h2>
+  <div class="proj-grid">
+
+    <div class="proj-card">
+      <span class="proj-num">01</span>
+      <span class="proj-tag">EdTech · B2B · PlayMoolah · 2024–Present</span>
+      <h3 class="proj-title">Financial Wellbeing E-Learning for IHLs</h3>
+      <p class="proj-desc">Spearheading B2B e-learning modules on financial wellbeing for 12,000 students (aged 17–35) across 2 cohorts in multiple IHLs. Orchestrated a multidisciplinary team — graphics, video, marketing, BD, IT — achieving 100% positive impact scoring and a 22% improvement in student financial confidence.</p>
+      <div class="proj-metrics">
+        <div><span class="met-val">12,000</span><span class="met-key">Students Reached</span></div>
+        <div><span class="met-val">22%</span><span class="met-key">↑ Financial Confidence</span></div>
+        <div><span class="met-val">95%</span><span class="met-key">On-time Delivery</span></div>
+      </div>
+    </div>
+
+    <div class="proj-card">
+      <span class="proj-num">02</span>
+      <span class="proj-tag">Events · B2B2C · Hybrid · PlayMoolah</span>
+      <h3 class="proj-title">5-Event Hybrid Series — Money & Wealth Conversations</h3>
+      <p class="proj-desc">Co-led a series of 5 hybrid events collecting stories across generations on money and wealth. Managed timelines, budgets, scope, and quality control — UX enhancements reduced drop-off rates and accelerated delivery by 20%. Boosted team productivity by 55% through proactive risk management and structured standups.</p>
+      <div class="proj-metrics">
+        <div><span class="met-val">700+</span><span class="met-key">Participants</span></div>
+        <div><span class="met-val">35k+</span><span class="met-key">Social Media Reach</span></div>
+        <div><span class="met-val">70%</span><span class="met-key">↑ Social Engagement</span></div>
+      </div>
+    </div>
+
+    <div class="proj-card">
+      <span class="proj-num">03</span>
+      <span class="proj-tag">NLP · AI · Google · 2019–2024</span>
+      <h3 class="proj-title">Vietnamese NLP & LLM Data — Google</h3>
+      <p class="proj-desc">4.5 years as Associate NLP Linguist at Google, specialising in Vietnamese language analysis for dialogue/AI systems. Consistent 90%+ accuracy rate — resolving diacritic issues, dialect variation, grammar and annotation quality for in-house AI products across large-volume multi-review tasks.</p>
+      <div class="proj-metrics">
+        <div><span class="met-val">90%+</span><span class="met-key">Accuracy Rate</span></div>
+        <div><span class="met-val">4.5 yrs</span><span class="met-key">At Google</span></div>
+        <div><span class="met-val">Vietnamese</span><span class="met-key">AI Language</span></div>
+      </div>
+    </div>
+
+    <div class="proj-card">
+      <span class="proj-num">04</span>
+      <span class="proj-tag">EdTech · Volunteer · STEAM for Vietnam · 2021–2023</span>
+      <h3 class="proj-title">Computational Thinking Courses — 34 Countries</h3>
+      <p class="proj-desc">Education PM for STEAM for Vietnam Foundation — 3 successive Scratch Programming courses for 2,000+ students across 34 countries each term. Forged partnerships with 5+ Vietnamese primary schools, orchestrated nationwide workshops across 5 locations (80+ students/session), led 170+ member Agile team.</p>
+      <div class="proj-metrics">
+        <div><span class="met-val">2,000+</span><span class="met-key">Students/Term</span></div>
+        <div><span class="met-val">34</span><span class="met-key">Countries</span></div>
+        <div><span class="met-val">34%</span><span class="met-key">↑ STEAM Awareness</span></div>
+      </div>
+    </div>
+
+    <div class="proj-card">
+      <span class="proj-num">05</span>
+      <span class="proj-tag">Mentorship · YMCA · MENDAKI · NUS · PlayMoolah</span>
+      <h3 class="proj-title">Youth Mentorship Across 4 Organisations</h3>
+      <p class="proj-desc">Active mentor across YMCA (Youth for Cause — 5 NUS High School students, $5k fundraising goal), MENDAKI (#amPowered — ITE students, employability), PlayMoolah (NUS Overseas College interns — 3-week onboarding, weekly coaching), and STEAM for Vietnam (45% retention improvement).</p>
+      <div class="proj-metrics">
+        <div><span class="met-val">4</span><span class="met-key">Organisations</span></div>
+        <div><span class="met-val">45%</span><span class="met-key">↑ Intern Retention</span></div>
+        <div><span class="met-val">$5k</span><span class="met-key">Fundraising Target</span></div>
+      </div>
+    </div>
+
+    <div class="proj-card">
+      <span class="proj-num">06</span>
+      <span class="proj-tag">Marketing · B2B · Pharma · Daewoong · 2018–2019</span>
+      <h3 class="proj-title">B2B Exhibitions & Product Launches — Pharma</h3>
+      <p class="proj-desc">Assistant Marketing Manager at Daewoong Pharmaceutical — managed 6 B2B exhibitions in beauty-cosmetics, 3 product launches, and 4 national hospital presentations. Conducted statistical analysis for a 6-month clinical research project engaging 20+ KOL doctors, including an overseas trip to Korea.</p>
+      <div class="proj-metrics">
+        <div><span class="met-val">6</span><span class="met-key">B2B Exhibitions</span></div>
+        <div><span class="met-val">3</span><span class="met-key">Product Launches</span></div>
+        <div><span class="met-val">20+ KOL</span><span class="met-key">Doctors Engaged</span></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="inner">
+    <div class="sec-label">In the Field</div>
+    <h2 class="sec-title">Community gatherings<br><em>throughout the years.</em></h2>
+  </div>
+  <div class="inner">
+    <div class="g-strip row1">
+      <div class="g-item"><img src="https://viettruchong.wordpress.com/wp-content/uploads/2026/01/5.jpg" alt=""><div class="g-cap">PlayMoolah hybrid event series</div></div>
+      <div class="g-item"><img src="https://viettruchong.wordpress.com/wp-content/uploads/2026/01/b44907cd-5c7d-443c-a69f-c6e3a15eba17.jpg" alt=""><div class="g-cap">Money &amp; wealth conversations gathering</div></div>
+      <div class="g-item"><img src="https://viettruchong.wordpress.com/wp-content/uploads/2026/01/whatsapp-image-2024-12-06-at-09.46.23-1.jpeg" alt=""><div class="g-cap">Youth engagement programme</div></div>
+      <div class="g-item"><img src="https://viettruchong.wordpress.com/wp-content/uploads/2023/11/294535024_585497406319316_6211772502848821002_n.jpg" alt=""><div class="g-cap">Community team gathering</div></div>
+      <div class="g-item"><img src="https://viettruchong.wordpress.com/wp-content/uploads/2023/12/img_8199.jpg" alt=""><div class="g-cap">Education initiative — on the ground</div></div>
+      <div class="g-item"><img src="https://viettruchong.wordpress.com/wp-content/uploads/2023/12/img_0188.jpg" alt=""><div class="g-cap">Workshop facilitation</div></div>
+    </div>
+    <div class="g-strip row2">
+      <div class="g-item"><img src="https://viettruchong.wordpress.com/wp-content/uploads/2026/01/img_6462.png" alt=""><div class="g-cap">Event production &amp; run-of-show</div></div>
+      <div class="g-item"><img src="https://viettruchong.wordpress.com/wp-content/uploads/2026/01/img_6459.png" alt=""><div class="g-cap">Programme planning session</div></div>
+      <div class="g-item"><img src="https://viettruchong.wordpress.com/wp-content/uploads/2023/11/screenshot-2023-11-30-at-6.59.00e280afam-1.png" alt=""><div class="g-cap">Digital programme launch</div></div>
+      <div class="g-item"><img src="https://viettruchong.wordpress.com/wp-content/uploads/2023/11/screenshot-2022-06-12-at-10.06.29-pm.png" alt=""><div class="g-cap">Online community cohort</div></div>
+      <div class="g-item"><img src="https://viettruchong.wordpress.com/wp-content/uploads/2023/12/easydew-exhibition.jpeg" alt=""><div class="g-cap">Daewoong B2B beauty-cosmetics exhibition</div></div>
+      <div class="g-item"><img src="https://viettruchong.wordpress.com/wp-content/uploads/2023/12/img_6789.jpg" alt=""><div class="g-cap">Community impact moment</div></div>
+      <div class="g-item"><img src="https://viettruchong.wordpress.com/wp-content/uploads/2023/11/screenshot-2022-06-22-at-5.51.33-pm.png" alt=""><div class="g-cap">STEAM for Vietnam — online session</div></div>
+    </div>
+  </div>
+  <div class="g-hint">← scroll to explore →</div>
+
+  <div class="upload-wrap">
+    <div class="upload-zone" onclick="document.getElementById('photo-input').click()" ondragover="event.preventDefault();this.style.borderColor='#e8a88a'" ondragleave="this.style.borderColor='rgba(255,255,255,0.18)'" ondrop="handleDrop(event)">
+      <span class="uz-icon">📎</span>
+      <div class="uz-title">Add your photos here</div>
+      <div class="uz-sub">Drag &amp; drop or click · JPG, PNG, WEBP · Multiple files OK</div>
+      <input type="file" id="photo-input" accept="image/*" multiple style="display:none" onchange="handleInput(event)">
+    </div>
+    <div id="uploaded-gallery">
+      <div class="uploaded-header">
+        <span>Your photos — <span id="photo-count">0</span> added</span>
+        <button class="clear-btn" onclick="clearPhotos()">Clear all</button>
+      </div>
+      <div id="uploaded-strip"></div>
+    </div>
+  </div>
+</section>
+
+<!-- CV CTA -->
+<section id="cv">
+  <div class="sec-label">Credentials</div>
+  <div class="cv-layout">
+    <div>
+      <h2 class="cv-headline">The full picture,<br>one <em>document away.</em></h2>
+      <p class="cv-body">From <strong>12,000-student B2B cohorts</strong> at PlayMoolah to <strong>4.5 years of NLP work at Google</strong>, every line is backed by real numbers — 95% on-time delivery, 70% social engagement growth, 34% STEAM awareness increase.</p>
+      <div class="cv-btns">
+        <a href="https://drive.google.com/file/d/1S9GOeVYwciQRa5ktm9733WB0LcDNIUUA/view" target="_blank" class="cv-btn-dl">↓ Download CV</a>
+        <a href="https://www.linkedin.com/in/hongviettruc/" target="_blank" class="cv-btn-li">↗ LinkedIn</a>
+      </div>
+    </div>
+    <div class="cv-cards">
+      <div class="cv-card"><span class="cv-card-icon">🎓</span><div><div class="cv-card-title">Valedictorian · GPA 3.97 · First Class Honours</div><div class="cv-card-text">Postgrad Diploma in Business Management, Kingston International College SG (2023). BA English/Linguistics with 5 academic scholarships, HCMC University of Law (2019).</div></div></div>
+      <div class="cv-card"><span class="cv-card-icon">🌏</span><div><div class="cv-card-title">3 Languages · 3 Continents of Impact</div><div class="cv-card-text">Vietnamese (native), English IELTS 7.5 (C1), Chinese HSK 3 (B1). Delivered programmes in SG, Vietnam, USA and 34 countries via STEAM for Vietnam.</div></div></div>
+      <div class="cv-card"><span class="cv-card-icon">🤖</span><div><div class="cv-card-title">AI-literate PM — Not Just a Buzzword</div><div class="cv-card-text">Currently volunteering as PM on a Vietnamese AI agent at AI For Vietnam Foundation. Understands how LLM products are built — a rare edge in EdTech PM.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-grid">
+    <div>
+      <div class="sec-label">Work With Me</div>
+      <h2 class="sec-title">How can I help<br><em>you succeed?</em></h2>
+      <p class="contact-sub">I partner with organisations who want to build programmes that actually land — with young people, with B2B clients, and with communities that last beyond the project close date.</p>
+      <div class="contact-links">
+        <a href="https://www.linkedin.com/in/hongviettruc/" target="_blank" class="c-link">
+          <span class="c-link-icon">💼</span>
+          <div><div class="c-link-label">Connect on LinkedIn</div><div class="c-link-text">linkedin.com/in/hongviettruc</div></div>
+        </a>
+        <a href="mailto:viettruchong@gmail.com" class="c-link">
+          <span class="c-link-icon">✉️</span>
+          <div><div class="c-link-label">Send a message</div><div class="c-link-text">viettruchong@gmail.com</div></div>
+        </a>
+      </div>
+      <div class="contact-ctas">
+        <a href="https://www.linkedin.com/in/hongviettruc/" target="_blank" class="cta-a">Book a call ↗</a>
+        <a href="https://drive.google.com/file/d/1S9GOeVYwciQRa5ktm9733WB0LcDNIUUA/view" target="_blank" class="cta-b">Download CV</a>
+      </div>
+    </div>
+    <div class="help-cards">
+      <div class="help-header">I can help you with</div>
+      <div class="help-card"><div class="help-label">Programme Design &amp; Delivery</div><div class="help-text">Structure your B2B2C education programmes so they run on time, on budget, and create measurable outcomes for youth participants.</div></div>
+      <div class="help-card"><div class="help-label">Community &amp; Engagement Events</div><div class="help-text">Conceptualise and produce gatherings — from intimate workshops to large-scale annual conferences — that people genuinely remember.</div></div>
+      <div class="help-card"><div class="help-label">Cross-functional Team Leadership</div><div class="help-text">Align remote, multi-cultural teams across time zones with clarity, accountability structures, and Agile cadences that actually stick.</div></div>
+      <div class="help-card"><div class="help-label">EdTech &amp; AI-Aware Strategy</div><div class="help-text">Bring product-delivery instincts and NLP/LLM literacy to organisations building at the intersection of education and technology.</div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span class="foot-name">Viet-Truc (Rose) Hong</span>
+  <span class="foot-note">PMP® · EdTech · Singapore · 2025</span>
+</footer>
+
+<script>
+// COUNT-UP (stats already show correct values in HTML as fallback)
+const countEls = document.querySelectorAll('.stat-n[data-target]');
+const countObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (!e.isIntersecting) return;
+    const el = e.target;
+    const target = parseFloat(el.dataset.target);
+    const suffix = el.dataset.suffix || '';
+    const isFloat = String(target).includes('.');
+    const steps = 50, dur = 1200;
+    let step = 0;
+    const timer = setInterval(() => {
+      step++;
+      const val = Math.min(target * step / steps, target);
+      el.textContent = (isFloat ? val.toFixed(1) : Math.floor(val).toLocaleString()) + suffix;
+      if (step >= steps) { el.textContent = (isFloat ? target.toFixed(1) : target.toLocaleString()) + suffix; clearInterval(timer); }
+    }, dur / steps);
+    countObs.unobserve(el);
+  });
+}, { threshold: 0.5 });
+countEls.forEach(el => countObs.observe(el));
+
+// PHOTO UPLOAD
+let photos = [];
+function handleInput(e) { addPhotos(e.target.files); }
+function handleDrop(e) {
+  e.preventDefault();
+  e.currentTarget.style.borderColor = 'rgba(255,255,255,0.18)';
+  addPhotos(e.dataTransfer.files);
+}
+function addPhotos(files) {
+  [...files].forEach(f => {
+    if (!f.type.startsWith('image/')) return;
+    const r = new FileReader();
+    r.onload = ev => { photos.push(ev.target.result); render(); };
+    r.readAsDataURL(f);
+  });
+}
+function render() {
+  const strip = document.getElementById('uploaded-strip');
+  const box = document.getElementById('uploaded-gallery');
+  document.getElementById('photo-count').textContent = photos.length;
+  box.style.display = photos.length ? 'block' : 'none';
+  strip.innerHTML = photos.map((src, i) => `
+    <div style="flex:0 0 auto;width:250px;height:190px;position:relative;overflow:hidden;">
+      <img src="${src}" style="width:100%;height:100%;object-fit:cover;display:block;">
+      <button onclick="removePhoto(${i})" style="position:absolute;top:8px;right:8px;background:rgba(0,0,0,0.6);border:none;color:white;width:22px;height:22px;border-radius:50%;cursor:pointer;font-size:12px;">✕</button>
+    </div>`).join('');
+}
+function removePhoto(i) { photos.splice(i,1); render(); document.getElementById('photo-input').value=''; }
+function clearPhotos() { photos=[]; render(); document.getElementById('photo-input').value=''; }
+
+// NAV highlight
+window.addEventListener('scroll', () => {
+  const y = window.scrollY + 80;
+  document.querySelectorAll('section[id]').forEach(s => {
+    const link = document.querySelector(`.nav-links a[href="#${s.id}"]`);
+    if (link) link.style.color = (y >= s.offsetTop && y < s.offsetTop + s.offsetHeight) ? 'var(--terra)' : '';
+  });
+});
+</script>
+</body>
+</html>

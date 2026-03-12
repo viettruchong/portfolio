@@ -10,26 +10,7 @@
 <meta property="og:image" content="https://viettruchong.wordpress.com/wp-content/uploads/2023/11/img_5985-3.jpg">
 
 <style>@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300,1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@300;400&display=swap');
-/* ── EDIT MODE ── */
-.upload-wrap { display: none; }
-body.edit-mode .upload-wrap { display: block; }
-
-.edit-toggle {
-  display: flex; align-items: center; gap: 7px;
-  padding: 6px 14px; border-radius: 20px; cursor: pointer;
-  font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase;
-  border: 1px solid var(--border); background: transparent; color: var(--mid);
-  transition: all 0.2s; font-family: var(--sans);
-}
-.edit-toggle:hover { border-color: var(--terra); color: var(--terra); }
-body.edit-mode .edit-toggle {
-  background: rgba(196,113,74,0.1); border-color: var(--terra); color: var(--terra);
-}
-.edit-dot {
-  width: 7px; height: 7px; border-radius: 50%;
-  background: var(--border); flex-shrink: 0; transition: background 0.2s;
-}
-body.edit-mode .edit-dot { background: var(--terra); }
+.upload-wrap { display: none !important; }
 
 </style>
 <style>
@@ -72,7 +53,7 @@ nav {
   min-height: calc(100vh - 56px);
   margin-top: 56px;
   background: var(--cream);
-  align-items: centre;
+  align-items: stretch;
 }
 .hero-left {
   padding: 56px 48px 56px 80px;
@@ -107,7 +88,7 @@ nav {
 .portrait-frame img {
   position: absolute; inset: 0;
   width: 100%; height: 100%;
-  object-fit: cover; object-position: top center;
+  object-fit: contain; object-position: center bottom;
   filter: sepia(5%) contrast(1.04);
   display: block;
 }
@@ -189,7 +170,7 @@ nav {
 
 /* ── PROJECTS ── */
 #projects { background: var(--cream); }
-.proj-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; }
+.proj-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 2px; }
 .proj-card { background: var(--warm); border: 1px solid var(--border); padding: 32px 26px; position: relative; transition: background 0.25s; }
 .proj-card:hover { background: white; }
 .proj-num { font-family: var(--serif); font-size: 3rem; font-weight: 300; color: rgba(196,113,74,0.13); line-height: 1; display: block; margin-bottom: 14px; }
@@ -285,6 +266,40 @@ nav {
 .help-label { font-family: var(--mono); font-size: 0.61rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--terra); margin-bottom: 4px; }
 .help-text { font-size: 0.82rem; font-weight: 300; color: var(--mid); line-height: 1.55; }
 
+
+/* ── EMAIL CV POPUP ── */
+.email-popup-overlay {
+  display: none; position: fixed; inset: 0; z-index: 500;
+  background: rgba(26,21,16,0.55); backdrop-filter: blur(4px);
+  align-items: center; justify-content: center;
+}
+.email-popup-overlay.open { display: flex; }
+.email-popup {
+  background: var(--cream); border: 1px solid rgba(196,113,74,0.2);
+  padding: 40px; border-radius: 4px; max-width: 400px; width: 90%;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.18); position: relative;
+}
+.email-popup-close {
+  position: absolute; top: 14px; right: 18px;
+  background: none; border: none; font-size: 1.1rem; cursor: pointer; color: var(--mid);
+}
+.email-popup h3 { font-family: var(--serif); font-size: 1.5rem; font-weight: 300; color: var(--deep); margin-bottom: 8px; }
+.email-popup h3 em { font-style: italic; color: var(--terra); }
+.email-popup p { font-size: 0.83rem; color: var(--mid); line-height: 1.6; margin-bottom: 20px; }
+.email-popup-input {
+  width: 100%; padding: 11px 14px; border: 1px solid rgba(196,113,74,0.3);
+  border-radius: 2px; font-family: var(--sans); font-size: 0.88rem; color: var(--deep);
+  background: white; margin-bottom: 10px; outline: none; transition: border-color 0.2s; box-sizing: border-box;
+}
+.email-popup-input:focus { border-color: var(--terra); }
+.email-popup-btn {
+  width: 100%; padding: 12px; background: var(--terra); color: white; border: none;
+  font-family: var(--sans); font-size: 0.74rem; letter-spacing: 0.1em; text-transform: uppercase;
+  cursor: pointer; border-radius: 1px; transition: background 0.2s;
+}
+.email-popup-btn:hover { background: #b0613b; }
+.email-popup-note { font-size: 0.66rem; color: rgba(92,79,61,0.45); text-align: center; margin-top: 8px; margin-bottom: 0; line-height: 1.5; }
+
 /* ── FOOTER ── */
 footer { background: var(--deep); border-top: 1px solid rgba(255,255,255,0.06); padding: 22px 80px; display: flex; justify-content: space-between; align-items: center; }
 .foot-name { font-family: var(--serif); font-size: 0.93rem; color: rgba(255,255,255,0.32); }
@@ -299,7 +314,7 @@ footer { background: var(--deep); border-top: 1px solid rgba(255,255,255,0.06); 
 
   .hero { grid-template-columns: 1fr; min-height: auto; }
   .hero-left { padding: 48px 24px 28px; }
-  .hero-right { min-height: 400px; }
+  .hero-right { min-height: 500px; }
 
   .stats { grid-template-columns: repeat(3,1fr); padding: 32px 24px; gap: 12px; }
 
@@ -320,12 +335,10 @@ footer { background: var(--deep); border-top: 1px solid rgba(255,255,255,0.06); 
 /* Mobile (600px and below) */
 @media (max-width: 600px) {
   nav { padding: 12px 16px; }
-  .edit-toggle span#edit-label { display: none; }
-
   .hero-left { padding: 36px 16px 24px; }
   .hero-name { font-size: 2.4rem; }
   .hero { grid-template-columns: 1fr; min-height: auto; }
-  .hero-right { min-height: 380px; }
+  .hero-right { min-height: 460px; }
   .hero-quote-below { font-size: 0.78rem; }
 
   .stats { grid-template-columns: repeat(2,1fr); padding: 28px 16px; gap: 10px; }
@@ -360,12 +373,8 @@ footer { background: var(--deep); border-top: 1px solid rgba(255,255,255,0.06); 
     <a href="#about">About</a>
     <a href="#projects">Work</a>
     <a href="#gallery">Gallery</a>
-    <a href="#cv">CV</a>
     <a href="#contact">Contact</a>
   </div>
-  <button class="edit-toggle" onclick="toggleEdit()" title="Toggle edit mode">
-    <span class="edit-dot"></span><span id="edit-label">Edit</span>
-  </button>
 </nav>
 
 <!-- HERO -->
@@ -397,11 +406,11 @@ footer { background: var(--deep); border-top: 1px solid rgba(255,255,255,0.06); 
 
 <!-- STATS -->
 <div class="stats">
-  <div class="stat"><span class="stat-n" data-target="7" data-suffix="+">7+</span><span class="stat-l">Years in EdTech PM</span></div>
-  <div class="stat"><span class="stat-n" data-target="12000">12,000</span><span class="stat-l">Students in B2B Cohorts</span></div>
-  <div class="stat"><span class="stat-n" data-target="700" data-suffix="+">700+</span><span class="stat-l">Event Participants</span></div>
-  <div class="stat"><span class="stat-n" data-target="90" data-suffix="%+">90%+</span><span class="stat-l">NLP Accuracy · Google</span></div>
-  <div class="stat"><span class="stat-n" data-target="95" data-suffix="%">95%</span><span class="stat-l">On-time Delivery Rate</span></div>
+  <div class="stat"><span class="stat-n" data-target="7" data-suffix="+">–</span><span class="stat-l">Years in EdTech PM</span></div>
+  <div class="stat"><span class="stat-n" data-target="12000">–</span><span class="stat-l">Students in B2B Cohorts</span></div>
+  <div class="stat"><span class="stat-n" data-target="700" data-suffix="+">–</span><span class="stat-l">Event Participants</span></div>
+  <div class="stat"><span class="stat-n" data-target="90" data-suffix="%+">–</span><span class="stat-l">NLP Accuracy · Google</span></div>
+  <div class="stat"><span class="stat-n" data-target="95" data-suffix="%">–</span><span class="stat-l">On-time Delivery Rate</span></div>
 </div>
 
 <!-- ABOUT -->
@@ -496,35 +505,13 @@ footer { background: var(--deep); border-top: 1px solid rgba(255,255,255,0.06); 
     </div>
     <div class="proj-card">
       <span class="proj-num">04</span>
-      <span class="proj-tag">EdTech · Volunteer · STEAM for Vietnam · 2021–2023</span>
-      <h3 class="proj-title">Computational Thinking Courses — 34 Countries</h3>
-      <p class="proj-desc">Education PM for STEAM for Vietnam — 3 successive Scratch Programming courses for 2,000+ students across 34 countries per term. Nationwide workshops across 5 locations (80+ students/session), 170+ member Agile team.</p>
+      <span class="proj-tag">Operations · Process Improvement · AI Workflows · Teams</span>
+      <h3 class="proj-title">Operational Excellence &amp; Team Performance</h3>
+      <p class="proj-desc">Across multiple organisations, drove process improvement through Agile cadences, AI-assisted workflows, and tool adoption. Built learning cultures where teams grow with technology — boosting productivity, reducing friction, and lifting retention.</p>
       <div class="proj-metrics">
-        <div><span class="met-val">2,000+</span><span class="met-key">Students/Term</span></div>
-        <div><span class="met-val">34</span><span class="met-key">Countries</span></div>
-        <div><span class="met-val">34%</span><span class="met-key">↑ STEAM Awareness</span></div>
-      </div>
-    </div>
-    <div class="proj-card">
-      <span class="proj-num">05</span>
-      <span class="proj-tag">Mentorship · YMCA · MENDAKI · NUS · PlayMoolah</span>
-      <h3 class="proj-title">Youth Mentorship Across 4 Organisations</h3>
-      <p class="proj-desc">Active mentor at YMCA (Youth for Cause, $5k fundraising), MENDAKI (#amPowered ITE students), PlayMoolah (NUS Overseas College interns, 3-week onboarding), and STEAM for Vietnam (45% intern retention improvement).</p>
-      <div class="proj-metrics">
-        <div><span class="met-val">4</span><span class="met-key">Organisations</span></div>
+        <div><span class="met-val">55%</span><span class="met-key">↑ Team Productivity</span></div>
         <div><span class="met-val">45%</span><span class="met-key">↑ Intern Retention</span></div>
-        <div><span class="met-val">$5k</span><span class="met-key">Fundraising Target</span></div>
-      </div>
-    </div>
-    <div class="proj-card">
-      <span class="proj-num">06</span>
-      <span class="proj-tag">Marketing · B2B · Pharma · Daewoong · 2018–2019</span>
-      <h3 class="proj-title">B2B Exhibitions &amp; Product Launches — Pharma</h3>
-      <p class="proj-desc">Assistant Marketing Manager at Daewoong Pharmaceutical — 6 B2B exhibitions in beauty-cosmetics, 3 product launches, 4 national hospital presentations. 6-month clinical research with 20+ KOL doctors, including Korea.</p>
-      <div class="proj-metrics">
-        <div><span class="met-val">6</span><span class="met-key">B2B Exhibitions</span></div>
-        <div><span class="met-val">3</span><span class="met-key">Product Launches</span></div>
-        <div><span class="met-val">20+ KOL</span><span class="met-key">Doctors Engaged</span></div>
+        <div><span class="met-val">AI-first</span><span class="met-key">Workflow Design</span></div>
       </div>
     </div>
   </div>
@@ -556,41 +543,6 @@ footer { background: var(--deep); border-top: 1px solid rgba(255,255,255,0.06); 
     </div>
   </div>
   <div class="g-hint">← scroll to explore →</div>
-  <div class="upload-wrap">
-    <div class="upload-zone" onclick="document.getElementById('photo-input').click()" ondragover="event.preventDefault();this.style.borderColor='#e8a88a'" ondragleave="this.style.borderColor='rgba(255,255,255,0.17)'" ondrop="handleDrop(event)">
-      <span class="uz-icon">📎</span>
-      <div class="uz-title">Add more photos to gallery</div>
-      <div class="uz-sub">Drag &amp; drop or click · JPG, PNG, WEBP · Multiple OK</div>
-      <input type="file" id="photo-input" accept="image/*" multiple style="display:none" onchange="handleInput(event)">
-    </div>
-    <div id="uploaded-gallery">
-      <div class="uploaded-header">
-        <span>Added — <span id="photo-count">0</span> photos</span>
-        <button class="clear-btn" onclick="clearPhotos()">Clear all</button>
-      </div>
-      <div id="uploaded-strip"></div>
-    </div>
-  </div>
-</section>
-
-<!-- CV CTA -->
-<section id="cv">
-  <div class="sec-label">Credentials</div>
-  <div class="cv-layout">
-    <div>
-      <h2 class="cv-headline">The full picture,<br>one <em>document away.</em></h2>
-      <p class="cv-body">From <strong>12,000-student B2B cohorts</strong> at PlayMoolah to <strong>4.5 years of NLP work at Google</strong>, every line is backed by real numbers — 95% on-time delivery, 70% social engagement growth, 34% STEAM awareness increase.</p>
-      <div class="cv-btns">
-        <a href="https://drive.google.com/file/d/1S9GOeVYwciQRa5ktm9733WB0LcDNIUUA/view" target="_blank" class="cv-btn-dl">↓ Download CV</a>
-        <a href="https://www.linkedin.com/in/hongviettruc/" target="_blank" class="cv-btn-li">↗ LinkedIn</a>
-      </div>
-    </div>
-    <div class="cv-cards">
-      <div class="cv-card"><span class="cv-card-icon">🎯</span><div><div class="cv-card-title">PMP® Certified · Google PM · NUS Data Analytics</div><div class="cv-card-text">PMI-certified since Nov 2025, Google Project Management Professional (Coursera 2025), Data Analytics &amp; Insights from NUS School of Computing (2023). Rigorous methodology across every project.</div></div></div>
-      <div class="cv-card"><span class="cv-card-icon">🤖</span><div><div class="cv-card-title">AI-literate PM — Not Just a Buzzword</div><div class="cv-card-text">Volunteering as PM on a Vietnamese AI agent at AI For Vietnam Foundation. 4.5 years of NLP/LLM data work at Google means I understand how AI products are actually built — rare in EdTech PM.</div></div></div>
-      <div class="cv-card"><span class="cv-card-icon">🌏</span><div><div class="cv-card-title">3 Languages · 3 Continents of Impact</div><div class="cv-card-text">Vietnamese (native), English IELTS 7.5 (C1), Chinese HSK 3 (B1). Delivered programmes in SG, Vietnam, USA and 34 countries via STEAM for Vietnam.</div></div></div>
-    </div>
-  </div>
 </section>
 
 <!-- CONTACT -->
@@ -598,72 +550,85 @@ footer { background: var(--deep); border-top: 1px solid rgba(255,255,255,0.06); 
   <div class="contact-grid">
     <div>
       <div class="sec-label">Work With Me</div>
-      <h2 class="sec-title">How can I help<br><em>you succeed?</em></h2>
-      <p class="contact-sub">I partner with organisations who want to build programmes that actually land — with young people, with B2B clients, and with communities that last beyond the project close date.</p>
-      <div class="contact-links">
-        <a href="https://www.linkedin.com/in/hongviettruc/" target="_blank" class="c-link">
-          <span class="c-link-icon">💼</span>
-          <div><div class="c-link-label">Connect on LinkedIn</div><div class="c-link-text">linkedin.com/in/hongviettruc</div></div>
-        </a>
-        <a href="/cdn-cgi/l/email-protection#72041b1706060007111a1d1c1532151f131b1e5c111d1f" class="c-link">
-          <span class="c-link-icon">✉️</span>
-          <div><div class="c-link-label">Send a message</div><div class="c-link-text"><span class="__cf_email__" data-cfemail="91e7f8f4e5e5e3e4f2f9fefff6d1f6fcf0f8fdbff2fefc">[email&#160;protected]</span></div></div>
-        </a>
-      </div>
-      <div class="contact-ctas">
-        <a href="https://www.linkedin.com/in/hongviettruc/" target="_blank" class="cta-a">Schedule a call ↗</a>
-        <a href="/cdn-cgi/l/email-protection#afd9c6cadbdbdddaccc7c0c1c8efc8c2cec6c381ccc0c2" class="cta-b">Send me a message ✉</a>
+      <h2 class="sec-title">How can we build strong<br><em>organisations &amp; communities?</em></h2>
+      <p class="contact-sub">I partner with teams who want programmes that land — with young people, B2B clients, and communities built to outlast any project close date.</p>
+      <div class="contact-ctas" style="flex-direction:column; gap:10px; margin-top:28px;">
+        <a href="https://www.linkedin.com/in/hongviettruc/" target="_blank" class="cta-a" style="display:block; text-align:center;">💼 Message me on LinkedIn</a>
+        <button onclick="document.getElementById('emailPopup').classList.add('open')" class="cta-b" style="cursor:pointer; font-family:var(--sans); width:100%; display:block; text-align:center;">✉ Send my CV to your inbox</button>
       </div>
     </div>
     <div class="help-cards">
-      <div class="help-header">I can help you with</div>
-      <div class="help-card"><div class="help-label">Programme Design &amp; Delivery</div><div class="help-text">Structure your B2B2C education programmes so they run on time, on budget, and create measurable outcomes for youth participants.</div></div>
-      <div class="help-card"><div class="help-label">Community &amp; Engagement Events</div><div class="help-text">Conceptualise and produce gatherings — from intimate workshops to large-scale conferences — that people genuinely remember.</div></div>
-      <div class="help-card"><div class="help-label">Cross-functional Team Leadership</div><div class="help-text">Align remote, multi-cultural teams with clarity, accountability structures, and Agile cadences that actually stick.</div></div>
-      <div class="help-card"><div class="help-label">EdTech &amp; AI-Aware Strategy</div><div class="help-text">Bring product-delivery instincts and NLP/LLM literacy to organisations building at the intersection of education and technology.</div></div>
+      <div class="help-header">How I can work with you</div>
+      <div class="help-card"><div class="help-label">Education &amp; Training Design</div><div class="help-text">B2B2C programmes that run on time, on budget, with measurable outcomes for youth and adult learners.</div></div>
+      <div class="help-card"><div class="help-label">Community &amp; Engagement Events</div><div class="help-text">From intimate workshops to large-scale conferences — gatherings people genuinely remember.</div></div>
+      <div class="help-card"><div class="help-label">Cross-functional Team Leadership</div><div class="help-text">Aligning remote, multi-cultural teams with Agile cadences, clear accountability, and learning-forward cultures.</div></div>
+      <div class="help-card"><div class="help-label">Operations &amp; AI-Aware Strategy</div><div class="help-text">Process improvement, AI workflow integration, and delivery systems that scale without burning people out.</div></div>
     </div>
   </div>
 </section>
+
+<!-- EMAIL CV POPUP -->
+<div class="email-popup-overlay" id="emailPopup" onclick="if(event.target===this)this.classList.remove('open')">
+  <div class="email-popup">
+    <button class="email-popup-close" onclick="document.getElementById('emailPopup').classList.remove('open')">✕</button>
+    <div id="popupForm">
+      <h3>Get Rose's CV<br><em>in your inbox.</em></h3>
+      <p>Drop your email and I'll send my full CV straight to you — no link-chasing.</p>
+      <input type="email" class="email-popup-input" id="popupEmail" placeholder="your@email.com">
+      <button class="email-popup-btn" onclick="submitCVEmail()">Send me the CV →</button>
+      <p class="email-popup-note">I'll only use your email to send the CV. No spam.</p>
+      <div style="display:flex;align-items:center;gap:10px;margin-top:16px;">
+        <div style="flex:1;height:1px;background:rgba(196,113,74,0.15);"></div>
+        <span style="font-size:0.68rem;color:rgba(92,79,61,0.4);letter-spacing:0.08em;text-transform:uppercase;">or</span>
+        <div style="flex:1;height:1px;background:rgba(196,113,74,0.15);"></div>
+      </div>
+      <a href="https://drive.google.com/file/d/1S9GOeVYwciQRa5ktm9733WB0LcDNIUUA/view" target="_blank" style="display:block;margin-top:12px;padding:11px;text-align:center;border:1px solid rgba(196,113,74,0.3);border-radius:1px;font-family:var(--sans);font-size:0.74rem;letter-spacing:0.09em;text-transform:uppercase;color:var(--mid);text-decoration:none;transition:border-color 0.2s,color 0.2s;" onmouseover="this.style.borderColor='#c4714a';this.style.color='#c4714a'" onmouseout="this.style.borderColor='rgba(196,113,74,0.3)';this.style.color='var(--mid)';">↓ Download CV directly</a>
+    </div>
+    <div class="email-popup-success" id="popupSuccess" style="display:none;">
+      <span style="font-size:2rem;display:block;margin-bottom:10px;text-align:center;">✓</span>
+      <p style="text-align:center;font-size:0.88rem;color:var(--mid);">Check your inbox shortly.<br><span style="opacity:0.6">Or reach Rose at <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="215748445555535442494e4f4661464c40484d0f424e4c">[email&#160;protected]</a></span></p>
+    </div>
+  </div>
+</div>
 
 <footer>
   <span class="foot-name">Viet-Truc (Rose) Hong</span>
   <span class="foot-note">PMP® · EdTech · Singapore · 2025</span>
 </footer>
 
-<script>
-// COUNT-UP — works even when stats are visible on first load
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+// COUNT-UP — scroll-triggered only, 3s delay after entering view, ease-out
 function runCountUp(el) {
   if (el.dataset.counted) return;
   el.dataset.counted = '1';
   const target = parseFloat(el.dataset.target);
   const suffix = el.dataset.suffix || '';
   const isFloat = String(target).includes('.');
-  let step = 0, steps = 50;
+  const duration = 1800, steps = 60;
+  let step = 0;
+  el.textContent = isFloat ? '0.0' : '0';
   const t = setInterval(() => {
     step++;
-    const v = Math.min(target * step / steps, target);
+    const eased = 1 - Math.pow(1 - step / steps, 3);
+    const v = target * eased;
     el.textContent = (isFloat ? v.toFixed(1) : Math.floor(v).toLocaleString()) + suffix;
     if (step >= steps) {
       el.textContent = (isFloat ? target.toFixed(1) : target.toLocaleString()) + suffix;
       clearInterval(t);
     }
-  }, 1400 / steps);
+  }, duration / steps);
 }
 
 const statEls = document.querySelectorAll('.stat-n[data-target]');
-const obs = new IntersectionObserver((entries) => {
-  entries.forEach(e => { if (e.isIntersecting) { runCountUp(e.target); obs.unobserve(e.target); } });
-}, { threshold: 0.1, rootMargin: '0px 0px 100px 0px' });
-
-statEls.forEach(el => {
-  // If already visible on page load (stats near top), run immediately
-  const rect = el.getBoundingClientRect();
-  if (rect.top < window.innerHeight) {
-    setTimeout(() => runCountUp(el), 300);
-  } else {
-    obs.observe(el);
-  }
-});
+const statObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      setTimeout(() => runCountUp(e.target), 3000);
+      statObs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.5 });
+statEls.forEach(el => statObs.observe(el));
 
 // ABOUT PHOTO SLOTS
 function triggerSlot(i) { document.getElementById('slot-input-' + i).click(); }
@@ -714,9 +679,4 @@ function renderGallery() {
     </div>`).join('');
 }
 function removePhoto(i) { photos.splice(i,1); renderGallery(); document.getElementById('photo-input').value=''; }
-function clearPhotos() { photos=[]; renderGallery(); document.getElementById('photo-input').value=''; }
-
-// NAV active
-window.addEventListener('scroll', () => {
-  const y = window.scrollY + 80;
-  document.querySelectorAll('section[id]').forEach(s =>
+function clearPh
